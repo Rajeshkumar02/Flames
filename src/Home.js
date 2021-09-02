@@ -12,9 +12,9 @@ function Home() {
     const handler = async (event) => {
         event.preventDefault();
         var name1 = you;
-        var name =another;
-        var flamess="";
-        var images="";
+        var name = another;
+        var flamess = "";
+        var images = "";
         const youlow = you.toLowerCase();
         const youlow1 = youlow.replace(/\s+/g, '');
         const anylow = another.toLowerCase();
@@ -31,8 +31,8 @@ function Home() {
         const anylen = anylow1.length;
         var count = 0;
 
-        for (let i in youlow1) {
-            for (let j in anylow2) {
+        for (let i = 0; i < youlow1.length; i++) {
+            for (let j = 0; j < anylow2.length; j++) {
                 if (youlow1[i] === anylow2[j]) {
                     count++;
                     anylow2 = anylow2.replace(anylow2[j], "");
@@ -42,23 +42,40 @@ function Home() {
         }
         const total = (youlen - count) + (anylen - count);
         if (total === 0) {
-            flamess="Friends";
-            images=image1[0];
+            flamess = "Friends";
+            images = image1[0];
         }
         else if (total % 6 === 0) {
-            flamess="Sibling";
-            images=image1[5];
+            flamess = "Sibling";
+            images = image1[5];
         }
         else {
             var y = 0;
             y = total % 6;
             y--;
-            flamess=flames[y];
-            images=image1[y];
+            flamess = flames[y];
+            images = image1[y];
         }
-        const locate={
-            pathname:"/next",
-            state:[{name:name,flame:flamess,image:images}]
+        const locate = {
+            pathname: "/next",
+            state: [{ name: name, flame: flamess, image: images }]
+        }
+        try {
+            const response = await fetch(
+                "https://v1.nocodeapi.com/rajeshkumar/google_sheets/PfWRMQyocoaAnRPG?tabId=Sheet1",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify([
+                        [name1, name, flamess],
+                    ]),
+                }
+            );
+
+        } catch (error) {
+            console.log("Nothig")
         }
         history.push(locate);
         history.replace(locate);

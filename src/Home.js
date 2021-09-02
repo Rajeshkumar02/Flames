@@ -102,11 +102,11 @@ function Home() {
                                 S - Sibling</p>
                             <form onSubmit={handler}>
                                 <label>
-                                    Enter your Name :
+                                    Enter your Name :<br></br>
                                     <input type="text" name="name" onChange={(e) => setYou(e.target.value)} />
                                 </label><br />
                                 <label>
-                                    Enter his/her Name :
+                                    Enter his/her Name :<br></br>
                                     <input type="text" name="name" onChange={(e) => setAnother(e.target.value)} />
                                 </label><br />
                                 <center><input className="btn button" type="submit" value="Submit" /></center>

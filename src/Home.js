@@ -60,23 +60,6 @@ function Home() {
             pathname:"/next",
             state:[{name:name,flame:flamess,image:images}]
         }
-        try{
-            const response = await fetch(
-                "https://v1.nocodeapi.com/rajeshkumar/google_sheets/PfWRMQyocoaAnRPG?tabId=Sheet1",
-                {
-                    method: "POST",
-                    headers:{
-                        "Content-Type": "application/json",
-                    },
-                    body:JSON.stringify([
-                        [name1,name,flamess],
-                    ]),
-                }
-            );
-            
-        }catch(error){
-            console.log("Nothig")
-        }
         history.push(locate);
         history.replace(locate);
     }

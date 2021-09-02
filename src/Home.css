@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.button, .card-text, card-title{
+  font-family: 'Open Sans', sans-serif;
+}
+.container{
+  padding: 30px;
+}
+
+.card{
+  width: 20rem;
+  border-top-right-radius: 10px 10px;
+  border-top-left-radius: 50px 50px;
+  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 50px 50px;
+  box-shadow: 2px 2px 15px 2px #ccc;
+}
+
+.img{
+   border-top-right-radius: 5px 5px;
+  border-top-left-radius: 50px 50px;
+}
+
+.button{
+  transition: 0.8s ease;
+  background-color: #0082FE;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 2rem;
+}
+
+.button:hover{
+  transition: 0.8s ease;
+  border-color: #0082FE;
+  background-color: #fff;
+  color: #0082FE;
+  font-size: 14px;
+}

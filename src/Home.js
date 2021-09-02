@@ -79,6 +79,7 @@ function Home() {
         }
         history.push(locate);
         history.replace(locate);
+        console.log(response);
     }
 
     return (

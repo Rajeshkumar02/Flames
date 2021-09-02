@@ -12,7 +12,7 @@ function Next() {
                 <div className="container">
                     <div className="card">
 
-                        <img src={s[0].image } class="rounded mx-auto d-block" alt={s[0].flame}/>
+                        <img src={s[0].image }  alt={s[0].flame}/>
 
                         <div className="card-body">
 

@@ -103,11 +103,11 @@ function Home() {
                             <form onSubmit={handler}>
                                 <label>
                                     Enter your Name :<br></br>
-                                    <input type="text" name="name" onChange={(e) => setYou(e.target.value)} />
+                                    <input type="text" name="name" onChange={(e) => setYou(e.target.value)} required/>
                                 </label><br />
                                 <label>
                                     Enter his/her Name :<br></br>
-                                    <input type="text" name="name" onChange={(e) => setAnother(e.target.value)} />
+                                    <input type="text" name="name" onChange={(e) => setAnother(e.target.value)} required/>
                                 </label><br />
                                 <center><input className="btn button" type="submit" value="Submit" /></center>
                             </form>

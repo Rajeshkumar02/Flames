@@ -25,7 +25,7 @@ function Home() {
             "https://png.pngtree.com/png-clipart/20210826/ourlarge/pngtree-520-valentines-day-hand-drawn-cartoon-elements-png-image_3527438.jpg",
             "https://e7.pngegg.com/pngimages/41/459/png-clipart-couple-wedding-marriage-cartoon-couple-love-cartoon-character.png",
             "https://banner2.cleanpng.com/20190616/ugo/kisspng-devil-friendship-enemy-good-5d0665a0666704.9050034815607003204194.jpg",
-            "https://us.123rf.com/450wm/lenm/lenm1301/lenm130100024/17291086-illustration-of-a-girl-being-led-by-her-elder-brother.jpg?ver=6"]
+            "https://www.kindpng.com/picc/m/16-164838_brother-sibling-sister-clip-art-brother-and-sister.png"]
         const flames = ['Friend', 'Love', 'Affection', 'Marriage', 'Enemy', 'Sibling'];
         const youlen = youlow1.length;
         const anylen = anylow1.length;

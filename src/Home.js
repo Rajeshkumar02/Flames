@@ -62,7 +62,7 @@ function Home() {
             pathname: "/next",
             state: [{ name: name, flame: flamess, image: images }]
         }
-        db.collection("FLAMES").doc(you+another).set(
+        db.collection("FLAMES").doc(you+" , "+another).set(
             {
                 Name: name1,
                 Name2: name,

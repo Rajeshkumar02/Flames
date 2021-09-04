@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./Home.css";
 import { useHistory } from 'react-router';
+import {db} from "./Config";
 
 function Home() {
 
@@ -40,6 +41,7 @@ function Home() {
                 }
             }
         }
+        
         const total = (youlen - count) + (anylen - count);
         if (total === 0) {
             flamess = "Friends";
@@ -60,25 +62,16 @@ function Home() {
             pathname: "/next",
             state: [{ name: name, flame: flamess, image: images }]
         }
-        try {
-            const response = await fetch(
-                "https://v1.nocodeapi.com/rajeshkumar/google_sheets/PfWRMQyocoaAnRPG?tabId=Sheet1",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify([
-                        [name1, name, flamess],
-                    ]),
-                }
-            );
-
-        } catch (error) {
-            console.log("Nothig")
-        }
+        db.collection("FLAMES").doc(you+another).set(
+            {
+                Name: name1,
+                Name2: name,
+                Relation: flamess,
+            }
+        )
         history.push(locate);
         history.replace(locate);
+
     }
 
     return (
